@@ -9,6 +9,13 @@ const app = express()
 
 const port = 4000
 
+
+const data = {
+  "login":"prakash",
+  "id ": 23432,
+  "Address":"Mathura",
+  "College":"AKTU"
+}
 app.get('/',(req,res) => {
   res.send("Hello Jay ")
 })
@@ -23,6 +30,10 @@ app.get('/login',(req,res) => {
 
 app.get('/youtube',(req,res)=>{
   res.send("Hii i am here ")
+})
+
+app.get('/data',(req,res) => {
+  res.send(data)
 })
 app.listen(process.env.PORT,() =>{
   console.log(`Example app listening on port ${port}`)
